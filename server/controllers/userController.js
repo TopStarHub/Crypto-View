@@ -2,7 +2,7 @@ const userModel = require("../models/userModel.js");
 const mongoose = require("mongoose");
 const process = require("process");
 const jwt = require("jsonwebtoken");
-const config = require('../config');
+const config = require('../../config');
 const dotenv = require('dotenv');
 dotenv.config();
 
