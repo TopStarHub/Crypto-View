@@ -2,10 +2,9 @@ const userModel = require("../models/userModel.js");
 const mongoose = require("mongoose");
 const process = require("process");
 const jwt = require("jsonwebtoken");
-const config = require('../../config');
 const dotenv = require('dotenv');
 dotenv.config();
-
+console.log(process.env.AUTH_API_KEY)
 const createToken = (_id) => {
   return jwt.sign({ _id }, process.env.SECRET, { expiresIn: "3d" });
 };
