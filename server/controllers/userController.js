@@ -4,9 +4,7 @@ const process = require("process");
 const jwt = require("jsonwebtoken");
 const dotenv = require('dotenv');
 dotenv.config();
-console.log(process.env.AUTH_API_KEY)
-console.log(process.env.SECRET)
-console.log("----------here-----------")
+
 const createToken = (_id) => {
   return jwt.sign({ _id }, process.env.SECRET, { expiresIn: "3d" });
 };
